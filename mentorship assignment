@@ -1,0 +1,15 @@
+import random  # Import the random module, which will be used to generate a random number.
+
+print("WELCOME TO THE GUESSING GAME")  # Print a welcome message to the user.
+
+number = random.randint(1, 99)  # Generate a random integer between 1 and 99 and store it in the variable 'number'.
+
+while True:  # Begin an infinite loop that will continue until the user guesses the correct number.
+    guessnumber = int(input("Hello guess a number from 1-99: "))  # Prompt the user to input a number and convert it to an integer.
+    if guessnumber == number:  # If the user's guess is equal to the random number, print a success message and break out of the loop.
+        print("Congratulations, you guessed the correct number!")
+        break
+    elif guessnumber > number:  # If the user's guess is greater than the random number, print a message telling them to try again with a lower number.
+        print("The number is too high. Try again.")
+    else:  # If the user's guess is less than the random number, print a message telling them to try again with a higher number.
+        print("The number is too low. Try again.")
